@@ -36,7 +36,7 @@
           <button ion-button color="dark" clear>
             {{ item.nombre }}
           </button>
-          <button ion-button outline item-right color="danger">
+          <button (click)="borrar(i)" ion-button outline item-right color="danger">
             <ion-icon name="trash"></ion-icon>
             Borrar Item ({{ i }})
           </button>
