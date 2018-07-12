@@ -6,10 +6,21 @@ export class ListaDeseosService {
 
   listas : Lista[] = [];
   constructor() {
-    let lista1 = new Lista('compras')
-    let lista2 = new Lista('videoJuegos')
-    let lista3 = new Lista('trabajos')
+    this.CargarData();
+  }
 
-    this.listas.push(lista1,lista2,lista3);
+
+  ActualizarData(){
+    localStorage.setItem("data",JSON.stringify(this.listas));
+  }
+
+  CargarData(){
+    if(localStorage.getItem("data"))
+      this.listas = JSON.parse(localStorage.getItem("data"));
+  }
+
+  AgregarLista(lista : Lista){
+    this.listas.push(lista);
+    this.ActualizarData();
   }
 }
