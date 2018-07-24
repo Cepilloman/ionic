@@ -11,6 +11,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 //pages
 import { PendientesPage } from '../pages/pendientes/pendientes.component'
 import { TerminadosPage } from '../pages/terminados/terminados.component'
+import { AgregarPage } from '../pages/agregar/agregar.component'
 
 //services
 import { DeseosService } from '../services/deseos.service';
@@ -20,7 +21,8 @@ import { DeseosService } from '../services/deseos.service';
     MyApp,
     TabsPage,
     TerminadosPage,
-    PendientesPage
+    PendientesPage,
+    AgregarPage
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,8 @@ import { DeseosService } from '../services/deseos.service';
     MyApp,
     TabsPage,
     TerminadosPage,
-    PendientesPage
+    PendientesPage,
+    AgregarPage
   ],
   providers: [
     StatusBar,
