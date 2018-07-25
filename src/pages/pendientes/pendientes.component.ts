@@ -10,20 +10,12 @@ import { AgregarPage } from '../agregar/agregar.component';
 })
 
 export class PendientesPage {
-
-  listasPendientes : Lista[];
-
   constructor(
     public _deseosService : DeseosService,
     private _navCtrl : NavController,
     private _alertCtrl : AlertController
   ){
-    this.listasPendientes = this._deseosService.listas.filter( item => {return !item.terminada;});
-    console.log(this.listasPendientes)
-  }
 
-  ListaSeleccionada( item:Lista){
-    this._navCtrl.push( AgregarPage, { item : item, crear: false })
   }
 
   AgregarLista(){

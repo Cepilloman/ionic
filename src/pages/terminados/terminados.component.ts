@@ -8,9 +8,7 @@ import { Lista } from '../../models';
 })
 
 export class TerminadosPage {
-  listasTerminadas : Lista[];
   constructor(public _deseosService : DeseosService){
-    this.listasTerminadas = this._deseosService.listas.filter(item => { return item.terminada});
   }
 
   ListaSeleccionada( item:Lista){

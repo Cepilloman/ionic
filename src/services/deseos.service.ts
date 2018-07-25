@@ -19,6 +19,14 @@ export class DeseosService {
     this.GuardarStorage();
   }
 
+  EliminarLista(lista : Lista){
+    this.listas = this.listas.filter( listaData => {
+      return listaData.id !== lista.id;
+    });
+
+    this.GuardarStorage();
+  }
+
   GuardarStorage(){
     localStorage.setItem('data',JSON.stringify( this.listas ));
   }
@@ -26,7 +34,8 @@ export class DeseosService {
   CargarStorage(){
     if(localStorage.getItem('data'))
       this.listas = JSON.parse(localStorage.getItem('data'));
-    else 
+    else
       this.listas = [];
   }
+
 }

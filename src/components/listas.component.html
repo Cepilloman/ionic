@@ -1,0 +1,13 @@
+<ion-list>
+  <ion-item-sliding *ngFor="let lista of _deseosService.listas | filtroCompletado:terminada">
+    <button ion-item  (click)="ListaSeleccionada(lista)"> {{ lista.titulo }}
+      <ion-note item-end> {{ lista.items.length }} items</ion-note>
+    </button>
+
+    <ion-item-options side="rigth">
+      <button ion-button icon-only color="danger" (click)="EliminarLista(lista)">
+        <ion-icon name="trash"></ion-icon>
+      </button>
+    </ion-item-options>
+  </ion-item-sliding>
+</ion-list>
